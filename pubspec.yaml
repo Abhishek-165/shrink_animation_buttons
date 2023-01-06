@@ -1,8 +1,7 @@
 name: shrink_animation_button
-description: A new Flutter package project.
+description: Shrink animation buttons refer to buttons in a user interface that, when clicked, animate to a smaller size.
 version: 1.0.0
-homepage:
-
+homepage: https://github.com/Abhishek-165/shrink_animation_buttons.git
 environment:
   sdk: '>=2.18.4 <3.0.0'
   flutter: ">=1.17.0"
