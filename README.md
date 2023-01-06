@@ -1,10 +1,10 @@
 <div align="center">
   <h1>shrink_animation_buttons</h1>
   <div>
-    <a title="pub.dev" href="https://pub.dartlang.org/packages/shrink_animation_buttons" >
-      <img src="https://img.shields.io/pub/v/shrink_animation_buttons.svg?style=flat-square&include_prereleases&color=dc143c" />
+    <a title="pub.dev" href="https://pub.dartlang.org/packages/shrink_animation_button" >
+      <img src="https://img.shields.io/pub/v/shrink_animation_button.svg?style=flat-square&include_prereleases&color=dc143c" />
     </a>
-    <a title="Made with Material Design" href="https://github.com/Abhishek-165/shrink_animation_buttons">
+    <a title="Made with Material Design" href="https://github.com/Abhishek-165/shrink_animation_buttons"> </a>
       <img src="https://img.shields.io/badge/material-design-blue">
    </div>
 
