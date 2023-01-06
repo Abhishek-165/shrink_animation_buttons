@@ -21,12 +21,14 @@ class ShrinkAnimationCard extends StatefulWidget {
     this.shape,
   });
 
+  ///To overlay
   final double? elevation;
   //The value at which this animation is deemed to be dismissed.
   final double lowerBound;
   //The value at which this animation is deemed to be completed.
   final double upperBound;
   final Widget child;
+  // Called when the widget is clicked
   final VoidCallback? onTap;
   final Clip? clipBehavior;
   final Color? color;
@@ -49,11 +51,13 @@ class _ShrinkAnimationCardState extends State<ShrinkAnimationCard>
   AnimationController? _controller;
   @override
   void initState() {
+    ///initialise the animation controller for the shrink animation on the widget
     _controller = AnimationController(
       vsync: this,
       duration: widget.duration,
       lowerBound: widget.lowerBound,
       upperBound: widget.upperBound,
+      // Calls the listener every time the value of the animation changes.
     )..addListener(() {
         setState(() {});
       });
@@ -63,6 +67,7 @@ class _ShrinkAnimationCardState extends State<ShrinkAnimationCard>
   @override
   void dispose() {
     super.dispose();
+    // Called when this _controller object is removed from the tree permanently.
     _controller?.dispose();
   }
 
@@ -70,6 +75,7 @@ class _ShrinkAnimationCardState extends State<ShrinkAnimationCard>
   Widget build(BuildContext context) {
     _scale = 1 - _controller!.value;
     return GestureDetector(
+      // Reverse the state of the controller when the controller changes changed to forward or completed.
       onTapCancel: () {
         if (_controller?.status == AnimationStatus.forward ||
             _controller?.status == AnimationStatus.completed) {
@@ -79,6 +85,9 @@ class _ShrinkAnimationCardState extends State<ShrinkAnimationCard>
       onTapDown: _tapDown,
       onTap: widget.onTap,
       onTapUp: _tapUp,
+
+      ///[ScaleTransition], which animates changes in scale smoothly over a given duration.
+
       child: Transform.scale(
         scale: _scale,
         child: Card(
@@ -98,10 +107,12 @@ class _ShrinkAnimationCardState extends State<ShrinkAnimationCard>
     );
   }
 
+//Starts running this animation forwards (towards the end).
   void _tapDown(TapDownDetails details) {
     _controller!.forward();
   }
 
+  // Starts running this animation in reverse (towards the beginning).
   void _tapUp(TapUpDetails? tapUpDetails) {
     _controller!.reverse();
   }
