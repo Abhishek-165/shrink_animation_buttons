@@ -18,6 +18,10 @@
 </div>
 
 ---
+## Introduction 
+Shrink animation buttons refer to buttons in a user interface that, when clicked, animate to a smaller size. This type of animation is often used to provide visual feedback to the user, indicating that the button has been activated or that it is in a "pressed" state. Shrink animation buttons can be used to create a more interactive and engaging user experience.
+
+---
 
 ## Demo
 
@@ -77,6 +81,6 @@ shrink_animation_button currently has following widgets
 
 ## Contribution
 
-Feel free to [file an issue](https://github.com/tanmoy27112000/flutter_web_base/issues) if you find a problem or [make pull requests](https://github.com/tanmoy27112000/flutter_web_base/pulls).
+Feel free to [file an issue](https://github.com/Abhishek-165/shrink_animation_buttons/issues) if you find a problem or [make pull requests](https://github.com/Abhishek-165/shrink_animation_buttons/pulls).
 
 All contributions are welcome :)
